@@ -1,0 +1,5 @@
+Search for 'DrawDistance', then scroll down to the $High Setting and change: prop $ConfigGroup ClipPlaneDistances "0.25, 0.25, 3000, 3000" to prop $ConfigGroup ClipPlaneDistances "0.25, 0.25, 4000, 8000" and prop $ConfigGroup ClipPlaneMapViewDistances "1.0, 1500.0" to prop $ConfigGroup ClipPlaneMapViewDistances "1.0, 3500.0". This first setting will remove the cut that occurs in the silhouette of the Map when we move the camera away.
+
+Then change prop $ConfigGroup ClipPlaneZoomClose "100" to prop $ConfigGroup ClipPlaneZoomClose "500" and prop $ConfigGroup ClipPlaneZoomDistant "200" to prop $ConfigGroup ClipPlaneZoomDistant "500". This setting will fix the fog disappearing when we move the camera on the vertical axis, approaching or moving away from the terrain. By equalizing the values, the cut of the fog will no longer occur.
+
+Then change prop $ConfigGroup FogDistances "10000, 10, 100000, 3000" to prop $ConfigGroup FogDistances "800, 8, 800, 2800" and then change prop $ConfigGroup FogCurveModifier "1, 3" to prop $ConfigGroup FogCurveModifier "1, 2". This setting changes the density of the fog. After modifying, simply save the changes.
