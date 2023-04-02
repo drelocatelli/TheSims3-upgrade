@@ -15,8 +15,8 @@ xcopy "%gamePath%" "%backupfolder%\bin" /E /I /Y /s /q
 
 echo.
 echo Backup ok
+cscript //nologo "../bootstrap/dialog.vbs" "Backup done"
 echo.
-
 
 echo Running GPU Program
 echo.
@@ -38,6 +38,7 @@ mkdir ".\files"
 echo.
 echo.
 echo.
+start /B cscript //nologo "../bootstrap/dialog.vbs" "Select an option\n1. I use cd/steam\n2. proceed."
 echo Select a option:
 echo 1. I use cd/steam.
 echo 2. proceed.
@@ -56,10 +57,10 @@ xcopy "%cd%\bootstrap\ld_TS3PatchEA" "%cd%\files" /E /I /Y /s /q
 goto End
 
 :End
-
 echo.
 echo Copy files inside "%cd%\files"
 start "" "%cd%\files"
+start /B cscript //nologo "../bootstrap/dialog.vbs" "I have selected the necessary files for you\nNow i'll open a folder, copy these files inside ´Packages´ folder then put inside your mods folder\nThen, copy the other files outside ´Packages´ folder for your game directory\nOpen the Bin folder of your game, then open the TS3Patch.txt and change TPS=500 to TPS=1000 "
 
 echo.
 pause

@@ -2,9 +2,8 @@
 setlocal enabledelayedexpansion
 
 echo This is a risky modification! Different people report different experiences with this modification. I will create one more backup folder inside this upgrade folder for you.
-
+cscript //nologo "../bootstrap/dialog.vbs" "This is a risky modification! Different people report different experiences with this modification. I will create one more backup folder inside this upgrade folder for you."
 echo.
-pause
 
 for /f "usebackq tokens=1* delims==" %%a in ("../config.properties") do (
   if /i "%%a"=="gamePath" (
@@ -20,6 +19,7 @@ xcopy "%gamePath%\Bin" "%backupfolder%\Bin" /E /I /Y /s /q
 
 echo.
 echo Backup ok
+cscript //nologo "../bootstrap/dialog.vbs" "Backup done"
 echo.
 
 rem Replace Default.ini
@@ -154,18 +154,6 @@ set "replace=SimWorldCompositorCacheSize = 1310720000"
 move /y "%file%.new" "%file%" > nul
 
 
-
 start /WAIT "notepad.exe" "%file%"
 
-echo.
-pause
-
-
-
-
-
-
-
-
-echo.
-pause
+cscript //nologo "../bootstrap/dialog.vbs" "All modifications is set!\nNow you can close all"
