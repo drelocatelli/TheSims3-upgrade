@@ -12,4 +12,5 @@ https://modthesims.info/m/1515002
 -   [**Pedestrians around the world**](https://drive.google.com/file/d/1m09n2BsVeJhAW6fQVSnihgoEBHaCqYLE/view?usp=share_link)
 -   [**Smart vehicles decisions**](https://drive.google.com/file/d/1c9MmvfatGWEvqURYyIgBbA_irlmHbatC/view?usp=share_link)
 -    [**Smarter than ever**](https://drive.google.com/file/d/1iEDa_HvPYi6yW_XAbOb9Iu-Z1rml8ues/view?usp=share_link)
+
 Credits: [PT_BR Manual](https://boringbones.com/2023/05/23/get-out-project-tudo-que-voce-precisa-saber/#veiculos-habilitados-somente-pra-distancias-maiores)
